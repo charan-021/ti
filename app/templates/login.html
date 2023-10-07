@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">Login Form</div>
+            <div class="title signup">Signup Form</div>
+            
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup" >
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Signup</label>
+                <div class="slider-tab"></div>
+            </div>
+            <a href="index.html" class="close">
+              <ion-icon name="close-outline"></ion-icon>
+            </a>
+            <div class="form-inner">
+                <form action="#" class="login">
+                  <div class="field">
+                    <ion-icon name="mail-outline" class="mail"></ion-icon>
+                    <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                    <div>
+                      <ion-icon id="unlock1" onclick="unlock('lock1' , 'unlock1' , 'pass1')" name="lock-open-outline" class="unlock"></ion-icon>
+                    </div>
+                    <ion-icon id="lock1" onclick="lock('lock1','unlock1' , 'pass1')" name="lock-closed-outline" class="lock"></ion-icon>
+                    <input id="pass1" type="password" placeholder="Password" required id="myInput">
+                  </div>
+                  <div class="pass-link">
+                    <a href="#">Forgot password?</a>
+                  </div>
+                  <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Login">
+                  </div>
+                  <div class="signup-link">Don't have a account?
+                    <label for="signup" class="signup_now">Signup</label>
+                  </div>
+                </form>
+                <form action="#" class="signup">
+                  <div class="field">
+                    <ion-icon name="mail-outline" class="mail"></ion-icon>
+                    <input type="text" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                    <div>
+                      <ion-icon id="unlock2" onclick="unlock('lock2' , 'unlock2' , 'pass2')" name="lock-open-outline" class="unlock"></ion-icon>
+                    </div>
+                    <ion-icon id="lock2" onclick="lock('lock2','unlock2' , 'pass2')" name="lock-closed-outline" class="lock"></ion-icon>
+                    <input id="pass2" type="password" placeholder="Password" required>
+                  </div>
+                  <div class="field">
+                    <div>
+                      <ion-icon id="unlock3" onclick="unlock('lock3' , 'unlock3' , 'pass3')" name="lock-open-outline" class="unlock"></ion-icon>
+                    </div>
+                    <ion-icon id="lock3" onclick="lock('lock3','unlock3' , 'pass3')" name="lock-closed-outline" class="lock"></ion-icon>
+                    <input id="pass3" type="password" placeholder="Confirm password" required>
+                  </div>
+                  <label>
+                    <input type="checkbox"> I agree to the terms & conditions
+                  </label>
+                  <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Signup">
+                  </div>
+                  <div class="signup-link">Already have an account?
+                    <label for="login" class="login_now">Login</label>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="{% static 'login.js' %}"></script>
+</body>
+</html
+
